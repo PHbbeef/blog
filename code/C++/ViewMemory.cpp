@@ -24,4 +24,3 @@ int main()
     memory_dump(&B,sizeof(B));
     cout << B << endl;
 }
-
