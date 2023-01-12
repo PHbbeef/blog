@@ -23,6 +23,33 @@ body{
     object-fit: cover;  /* 保持图片比列 */
 }
 
+.B:after{
+    content: "好想做一条咸鱼啊！";
+    animation: B 7s infinite linear;
+}
+@keyframes B {
+    10% {
+        content: "haoxiang";
+        color: red;
+    }
+    30% {
+        content: "好想";
+        color: #3498db;
+    }
+    50%{
+        content: "好想zuoyitiao";
+        color: green;
+    }
+    70%{
+        content: "好想做一条xianyuaa";
+        color: #3498db;
+    }
+    90%{
+        content:"好想做一条咸鱼啊！";
+        color:red;
+    }
+}
+
 
 .btn{
     text-align:center;
