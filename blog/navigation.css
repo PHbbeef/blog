@@ -19,8 +19,12 @@ img{
     object-fit: cover;
 }
 
+
 .buju{
-    text-align: center;
+
+    text-align: center; /* 图片居中显示 */
+    margin-top: 50px; /* 上下距离 */
+    margin-left: 15%; /* 每个盒子的距离（左右距离） */
 }
 
 
