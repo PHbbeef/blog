@@ -1,5 +1,8 @@
 body{
     height: 100vh;
+    width: 100vh;
+
+    background:linear-gradient(lawngreen,green);
 
 }
 .body{
@@ -7,11 +10,11 @@ body{
     padding: 0;
     margin: 0;
 }
-*{
+/* *{
     border: 1px solid;
-}
+} */
 
-
+/* 图片圆形 */
 img{
     border-radius: 50%;
     width: 64px;
@@ -19,12 +22,10 @@ img{
     object-fit: cover;
 }
 
-
-.buju{
-
-    text-align: center; /* 图片居中显示 */
-    margin-top: 50px; /* 上下距离 */
-    margin-left: 15%; /* 每个盒子的距离（左右距离） */
+/* 显示边框，设置距离（美观） */
+.biankuang{
+    border: 1px solid;
+    margin-right: 20px;
 }
 
 
