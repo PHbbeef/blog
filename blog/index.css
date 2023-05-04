@@ -39,6 +39,10 @@ body{
     }
 }
 
+.weixin{
+    width: 92px;
+    height: 92px; 
+}
 
 .btn{
     text-align:center;
