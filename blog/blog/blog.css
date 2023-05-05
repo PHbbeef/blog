@@ -27,8 +27,8 @@ html{
 }
 .C{
     /* 保持图片比例 */
-    width: 350px;
-    height: 182px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;  /* 保持图片比列 */
 }
 .A1{
