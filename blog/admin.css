@@ -1,18 +1,32 @@
+html{
+    background:linear-gradient(#e3c5eb,#a9c1ed);
+}
 .body
 {
     margin: 0;
     padding: 0;
 }
-*
+/* *
 {
     border: 1px solid;
-}
+} */
 
-body{
-    /* 100%窗口高度 */
-    height: 100vh;
-    /* 弹性布局 居中 */
-    display: flex;
+
+.login{
     justify-content: center;
     align-items: center;
+}
+
+button{
+    padding: 20px 100px;    /* 更改大小 */
+    border: 1px solid #e3c5eb;  /* 方框颜色 */
+    font-size:20px;
+    background:linear-gradient(150deg,#74b9ff,#FDA7DF);
+    color: #fff;
+    transition: 0.8s;   /* 动画过渡 */
+}
+
+button:hover{
+    color: blue;
+
 }
