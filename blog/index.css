@@ -1,5 +1,10 @@
 body{
+    /*
     background:linear-gradient(#e3c5eb,#a9c1ed);
+    */
+    background-image: url(/jpg/9feb9b7a51e0e8cf7e6b9be1dbe93f92--3965176068.jpg);
+    background-size:cover; /* 图片适应布局（注：浏览器窗口模式运行） */
+    background-attachment: fixed; /* 图片居中 */
 }
 .body
 {
@@ -24,18 +29,33 @@ body{
 }
 
 .B:after{
-    content: "好想做一条咸鱼啊！";
-    animation: B 5s infinite linear;
+    content: "生之所往行止由心";
+    animation: B 6s;
 }
 @keyframes B {
     10% {
-        content: "好想";
+        content: "生";
     }
-    50% {
-        content: "好想做一条";
+    20% {
+        content: "生之";
     }
-    100%{
-        content: "好想做一条咸鱼啊！";
+    30%{
+        content: "生之所";
+    }
+    40%{
+        content: "生之所往";
+    }
+    50%{
+        content: "生之所往行";
+    }
+    60%{
+        content: "生之所往行止";
+    }
+    70%{
+        content: "生之所往行止由";
+    }
+    80%{
+        content: "生之所往行止由心";
     }
 }
 
@@ -55,7 +75,10 @@ body{
     background-color: #3498db;
     color: #fff;
     transition: 0.8s;   /* 动画过渡 */
+
+    background-color: transparent;  /* 透明 */
 }
+
 .btn1:hover{    /* 当鼠标指针移动到当前执行 */
     color: #3498db;    /* 字体颜色 */
     background-color:#fff ;
@@ -76,9 +99,72 @@ body{
     border: 1px solid #e3c5eb;
     font-size: 40px;
     background-color: #3498db;
-    color:#fff;  
+    color:#fff;
+    
+    background-color: transparent;  /* 透明 */
 }
 .btn2:hover{
     color: #3498db;
     background-color: #ffff;
+}
+
+
+span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.1),
+    0 0 0 8px rgba(255,255,255,0.1),
+    0 0 0 20px rgba(255,255,255,0.1);  
+
+    animation: animate 5s linear infinite;  /* 播放动画 */
+}
+span::before{
+    content: "";
+    position:absolute;
+    top: 50%;
+    transform:translateY(-50);
+    width: 300px;
+    height: 3px;
+    background:linear-gradient(90deg,#fff,transparent)
+}
+/* 动画 */
+@keyframes animate {
+    0%{
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+span:nth-child(1){
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 5s;
+}
+span:nth-child(2){
+    top: 20;
+    right: 0;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 5s;
+}
+span:nth-child(3){
+    top: 30px;
+    right: 0;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 10s;
 }

@@ -3,8 +3,13 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url(/jpg/wallhaven-d6pld3.jpg);
+    background-size:cover; /* 图片适应布局（注：浏览器窗口模式运行） */
+    background-attachment:fixed; /* 图片居中 */
+}
 html{
-    background:linear-gradient(150deg,#74b9ff,#FDA7DF);
+    /* background:linear-gradient(150deg,#74b9ff,#FDA7DF); */
 }
 
 /* *{
