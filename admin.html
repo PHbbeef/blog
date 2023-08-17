@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曲奇后台管理</title>
+
+    <link rel="stylesheet" href="admin.css">
+    <script src="js/axios.js"></script>
+</head>
+<body style="width: 100%;height: 100vh;display: flex">
+
+    <video id="video" autoplay muted loop>
+        <source src="./mp4/admin.mp4" type="video/mp4">
+    </video>
+
+    <div style="width: 33%;"></div>
+    <div class="A1" style="width: 33%;display: grid;">
+        <div style="height: 100%;"></div>
+        <div class="login" style="width: 100%;height: 100%;">
+            <div style="height: 100%;">
+                <h2 style="text-align: center;color: #16ee0f;"></h2>
+                <div style="display: grid;height: 50%;">
+                    <input id="user" style="height: 50%" type="text" placeholder="账户">
+                    <input id="password" style="height: 50%" type="password" placeholder="密码">
+                </div>
+                <a style="text-align: center;width: 100;height: 20%;display: flex;">
+                    <div style="width: 50%;height:100%;"></div>
+                    <button onclick="mymethon()" style="width: 100%;height:100%;">登录
+                        <script type="text/javascript">
+                            function  mymethon(){
+                                var user1 = document.getElementById("user").value;
+                                var password1 = document.getElementById("password").value;
+                                fetch("http://localhost:5000/Values/Login?user="+user1+"&password="+password1).then(data=>{
+                                    return data.text();
+                                        }).then(ret=>{
+                                            b = ret
+                                            alert(ret)
+
+                                            x = document.getElementById("tip");
+                                            x.innerHTML=b
+                                            setTimeout("x.innerHTML=''", 3000);                               
+                                        })
+                            }
+                        </script>
+                    </button>
+                    <div style="width: 50%;height:100%"></div>
+                </a>
+            </div>
+        </div>
+        <div style="height: 100%"></div>
+    </div>
+    <div style="height: 33%"></div>
+</body>
+</html>
