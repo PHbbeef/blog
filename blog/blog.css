@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background-image: url(https://gitcode.net/qq_39532644/tuchuang/-/raw/master/blog/wallhaven-d6pld3.jpg);
+    background-color: #000;
     background-size:cover; /* 图片适应布局（注：浏览器窗口模式运行） */
     background-attachment:fixed; /* 图片居中 */
 }
@@ -53,7 +53,8 @@ html{
     width: 32px;
     height: 32px;
 }
-.tubiao1{
+.label
+{
     width: 24px;
     height: 24px;
 }
@@ -61,4 +62,11 @@ html{
 /* 文字居中显示 */
 .juzhong{
     text-align: center;
+}
+
+
+.form{
+    border-radius: 5%;
+    background-color: rgb(37,45,56);
+    color: aliceblue;
 }

@@ -115,22 +115,24 @@ span{
     left: 50%;
     width: 16px;
     height: 16px;
-    background-color: #fff;
+    background-color: #5f91ff;  /* 球体颜色 */
     border-radius: 50%;
+
+    /* 头部发光范围 */
     box-shadow: 0 0 0 4px rgba(255,255,255,0.1),
     0 0 0 8px rgba(255,255,255,0.1),
-    0 0 0 20px rgba(255,255,255,0.1);  
+    0 0 0 10px rgba(255,255,255,0.1);  
 
     animation: animate 5s linear infinite;  /* 播放动画 */
 }
 span::before{
     content: "";
     position:absolute;
-    top: 50%;
+    top: 50%;   /* 头部在尾部中间 */
     transform:translateY(-50);
-    width: 300px;
+    width: 300px;   /* "尾部长度" */
     height: 3px;
-    background:linear-gradient(90deg,#fff,transparent)
+    background:linear-gradient(90deg,#5f91ff,transparent)   /* 尾部 */
 }
 /* 动画 */
 @keyframes animate {
