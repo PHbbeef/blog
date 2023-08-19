@@ -16,10 +16,9 @@ body{
 
 /* 图片圆形 */
 img{
-    border-radius: 50%;
     width: 64px;
     height: 64px;
-    object-fit: cover;
+    margin: auto;
 }
 
 
