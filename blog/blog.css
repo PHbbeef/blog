@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background-color: #000;
+    background:linear-gradient(#e3c5eb,#a9c1ed);
     background-size:cover; /* 图片适应布局（注：浏览器窗口模式运行） */
     background-attachment:fixed; /* 图片居中 */
 }
@@ -67,6 +67,101 @@ html{
 
 .form{
     border-radius: 5%;
-    background-color: rgb(37,45,56);
-    color: aliceblue;
 }
+
+
+#myAudio{
+    display: none;
+}
+.player{
+    position: relative;
+}
+.control{
+    width: 300px;
+    height: 80px;
+    background: #fff;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.alarm{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute; /* 这个必须要加否则ma...-top无法正常上移 */
+    margin-left: 20px;
+    margin-top: -15px;
+
+    /* 动画 */
+    transition: all 0.5 ease;
+}
+    .alarm::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        border-radius: 50%;
+        background: url(/jpg/wallhaven-d6pld3.jpg) no-repeat center center;
+        background-size: 100%;  
+    }
+    /* 碟片圆点 */
+    .alarm::after{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .buts{
+        display: flex;
+        justify-content: flex-end;
+        height: 80px;
+        padding: 0 15px;
+        font-size: 30px;
+        color: #b0b3b7fb;
+        }
+    .prev,.play,.next{
+        width: 55px;
+        height: auto;
+        border-radius: 10px;
+        background: #000 10px;
+        cursor: pointer;
+        margin-top: auto;
+    }
+    .prev:hover,.play:hover,.next:hover{
+        background: #eee;
+    }
+    .prev{
+        background: url('<i class="fa fa-step-backward" aria-hidden="true" /></i>');
+        text-align: center;
+    }
+    .play{
+        background: url('<i class="fa fa-stop" aria-hidden="true" /></i>');
+        text-align: center;
+    }
+    .next{
+        background: url('<i class="fa fa-step-forward" aria-hidden="true" /></i>');
+        text-align: center;
+    }
+    .control.active.play{
+        background-image: url('<i class="fa fa-stop" aria-hidden="true" /></i>');
+    }
+
+    .control.active .alarm::before{
+        animation: rotateF 3s infinite linear;
+    }
+    @keyframes rotateF{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }

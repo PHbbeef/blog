@@ -5,13 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/blog/blog.css">
-    <link rel="stylesheet" href="/blog/blog.js">
 </head>
 <body style="display: flex;height: 100vh;width: 100%;">
     <!-- 简介页面 -->
     <div class="brief" style="width: 30%;height: 100%;">
+        <audio id ="myAudio">
+            <source src="1.mp3" type="audio/mpeg">
+        </audio>
+        <div class="player">
+            <div class="control" id="control">
+                <div class="alarm"></div>
+                <div class="buts">
+                    <div class="prev"><i class="fa fa-step-backward" aria-hidden="true" /></i></div>
+                    <div id="play" class="play"><i class="fa fa-stop" aria-hidden="true" /></i></div>
+                    <div class="next"><i class="fa fa-step-forward" aria-hidden="true" /></i></div>
+                </div>
+
+            </div>
+        </div>
         <div style="width: 120%;height:25%"></div> <!-- 填充 -->
         <div class="form">
             <div style="display:flex">
@@ -27,15 +41,15 @@
                 <div style="width: 100%;">文章<div style="font-size: 20px;">0</div></div>
                 <div style="width: 100%;">标签<div style="font-size: 20px;">4</div></div>
             </div>
-        </div>
-
-        <div style="margin-top: 10%;background-color: rgb(37,45,56);color: aliceblue;border-radius: 5%;">
             <div style="height: 15%;display: grid;margin-left: 1%;">
                 <div style="width: 20%"><a href="https://space.bilibili.com/453101884"><img class="tubiao" src="/jpg/bilibili.png"></a></div>
                 <div style="width: 20%"><a href="https://github.com/PHbbeef"><img class="tubiao" src="/jpg/github.png"></a>
                 </div>
             </div>
-            <div style="height: 10%;">
+        </div>
+
+        <div>
+            <div style="height: 10%;margin-top: 10%;">
                 <div style="display:flex">
                     标签
                     <img class="label" src="/jpg/标签.png">
@@ -61,8 +75,8 @@
             <div style="width: 10%;"></div>
             <div style="width: 80%;height: 100%;">
                 <div style="height: 10%;"></div>
-                <div class="A1" style="height: 20%;background-color: rgb(37,45,56);">
-                    <a style="color: aliceblue;" class="href" href="www.baidu.com">
+                <div class="A1" style="height: 20%;">
+                    <a class="href" href="www.baidu.com">
                         <h1>测试</h1>
                         <p>Hello Wordl!</p>
                     </a>
@@ -71,4 +85,29 @@
         </div>
     </div> 
 </body>
+<script>
+// 播放按钮 
+let playBut=document.getElementById("play");
+// 播放器
+let myAudio = document.getElementById("myAudio");
+//控件
+let controlDom = document.getElementById('control');
+
+playBut.addEventListener("click",playF);
+// 点击事件
+function playF(){
+    let flag=Array.from(controlDom.classList).some(function(item)
+    {
+        return item=="active";
+    });
+    if(flag){
+        controlDom.classList.remove('active');
+        myAudio.pause();
+    }
+    else{
+        controlDom.classList.add('active');
+        myAudio.play();
+    }
+}
+</script>
 </html>
